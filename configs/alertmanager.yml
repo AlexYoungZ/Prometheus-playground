@@ -109,6 +109,11 @@ receivers:
   - to: 'example@gmail.com'
   # pagerduty_configs:
   #   - service_key: 'service key'
+  # slack_configs:
+  # - channel: '#channelname'
+  #   api_url: 'slack-webhook-url'
+  #   title: 'title-name'
+  #   text: 'text'
 
 
 - name: windows-team-admin
