@@ -42,6 +42,10 @@ scrape_configs:
         regex: l.*
         action: drop # keep
   
+  - job_name: cloudwatch
+    static_configs:
+    - targets: ['localhost:9106']
+
   - job_name: 'pushgateway'
     honor_labels: true
     static_configs:

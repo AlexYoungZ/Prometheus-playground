@@ -1,0 +1,6 @@
+region: # region
+metrics: 
+- aws namespace: AWS/EC2
+  aws_metric_name: CPUUtilization
+  aws_dimensions: [InstanceId]
+  aws_statistics: [Average]
