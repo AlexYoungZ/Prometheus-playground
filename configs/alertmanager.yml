@@ -4,6 +4,7 @@ global:
   smtp_auth_username: 'example@gmail.com'
   smtp_auth_identity: 'example@gmail.com'
   smtp_auth_password: 'fqkvkumorgaqgkat'
+  # pagerduty_url: 'url'
 
 route:
   # fallback receiver
@@ -78,7 +79,8 @@ route:
           severity: warning
         receiver: go-team-lead
         
-inhibit_rules:
+
+
 - source_match:
     severity: 'critical'
   target_match:
@@ -105,6 +107,9 @@ receivers:
 - name: linux-team-manager
   email_configs:
   - to: 'example@gmail.com'
+  # pagerduty_configs:
+  #   - service_key: 'service key'
+
 
 - name: windows-team-admin
   email_configs:
